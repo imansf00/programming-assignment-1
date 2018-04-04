@@ -1,0 +1,6 @@
+create a main definition (superclass)
+display list of choices (to calculate volume and surface area)
+ask for height/radius/length/width/slant based on choices
+display volume and surface area for 3d shape bdependant on choice
+definitions of volume and surface area calculations for each shape
+call for main class; while loop to repeat the calculations
