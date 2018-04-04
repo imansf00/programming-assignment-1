@@ -16,10 +16,11 @@ def v_sphere(radius):
     return 4/3*math.pi*(radius**3)
 def sa_sphere(radius):
     return 4*math.pi*(radius**2)
-def sa_cone(radius,slant):
+def sa_cone(radius,height):
+    slant = math.sqrt(radius**2 + height**2)
     return (math.pi*radius*slant) + (math.pi*(radius**2))
 def v_cone(radius,height):
-    return 1/3*math.pi*(radius**2)*height
+    return (1.0/3)*math.pi*(radius**2)*height
 def main():
     print ("""
 1. Cube
@@ -51,8 +52,7 @@ def main():
     elif choice == 5:
         radius=float(input("Enter the radius value: "))
         height=float(input("Enter the height value: "))
-        slant=float(input("Enter the slant value: "))
-        print("The surface area of the cone is %d" %(sa_cone(slant,radius)))
+        print("The surface area of the cone is %d" %(sa_cone(radius,height)))
         print("The volume of the cone is %d" %(v_cone(height,radius)))
     else:
         print ("Please enter a relevant choice")
